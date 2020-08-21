@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:id="@+id/signup_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/head_layout"
+        android:background="@drawable/gradient">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/user_image">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cr"
+                android:textSize="20sp"
+                android:fontFamily="@font/ambit_bold"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/user"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp">
+
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/user_image">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acc"
+                android:textSize="20sp"
+                android:fontFamily="@font/ambit_bold"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_layout"
+        android:layout_below="@id/head_layout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_layout"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/f_name_layout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
+
+                        <EditText
+                            android:id="@+id/first_name_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:gravity="start"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/ambit_regular"
+                            android:hint="@string/firstName"
+                            android:inputType="textCapWords"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textSize="17sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/l_name_layout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
+
+                        <EditText
+                            android:id="@+id/last_name_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:gravity="start"
+                            android:hint="@string/lastName"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/ambit_regular"
+                            android:inputType="textCapWords"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textSize="17sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_layout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/email_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="start"
+                        android:hint="@string/email"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ambit_regular"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="17sp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email_layout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/phone_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="start"
+                        android:hint="@string/ph"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ambit_regular"
+                        android:inputType="phone"
+                        android:digits="0123456789"
+                        android:maxLength="10"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="17sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone_layout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/address_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ambit_regular"
+                        android:gravity="start"
+                        android:hint="@string/fullAddress"
+                        android:inputType="text"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="17sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/city_code_layout"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/address_layout"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/city_layout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
+
+                        <EditText
+                            android:id="@+id/city_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:gravity="start"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/ambit_regular"
+                            android:hint="@string/city"
+                            android:inputType="textCapWords"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textSize="17sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/code_layout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
+
+                        <EditText
+                            android:id="@+id/code_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:gravity="start"
+                            android:hint="@string/pinCode"
+                            android:drawablePadding="10dp"
+                            android:digits="0123456789"
+                            android:maxLength="6"
+                            android:fontFamily="@font/ambit_regular"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textSize="17sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/city_code_layout"
+                    android:id="@+id/spinner"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="15dp">
+
+                </Spinner>
+
+                <Button
+                    android:id="@+id/next_btn"
+                    android:layout_below="@id/spinner"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/ambit_bold"
+                    android:background="@drawable/gradient_rev">
+
+                </Button>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageActivity"
+    android:background="@drawable/home_page">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/home_toolbar"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_toolbar"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="70dp"
+                    android:id="@+id/profile_image"
+                    android:layout_height="70dp"
+                    android:background="@drawable/splash_screen"
+                    app:civ_border_width="0.4dp"
+                    android:layout_margin="20dp"
+                    app:civ_border_color="@color/colorPrimaryDark">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/profile_image"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/full_name">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.6dp"
+                android:id="@+id/part"
+                android:background="@color/silver"
+                android:layout_below="@id/layout">
+
+            </View>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/email_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/part">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/email_icon"
+                        android:id="@+id/email_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/email_part"
+                        android:background="@color/silver"
+                        android:layout_toEndOf="@id/email_icon"
+                        android:layout_centerVertical="true">
+
+                    </View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@string/em"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/email_part">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/phone_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/email_card">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/call_icon"
+                        android:id="@+id/call_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/phone_part"
+                        android:background="@color/silver"
+                        android:layout_toEndOf="@id/call_icon"
+                        android:layout_centerVertical="true">
+
+                    </View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@string/phone"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/phone_part">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/address_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/phone_card">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/address_icon"
+                        android:id="@+id/address_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/add_part"
+                        android:background="@color/silver"
+                        android:layout_toEndOf="@id/address_icon"
+                        android:layout_centerVertical="true">
+
+                    </View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@string/add"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/add_part">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/categories_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/address_card">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/category_icon"
+                        android:id="@+id/categ_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/categ_part"
+                        android:background="@color/silver"
+                        android:layout_toEndOf="@id/categ_icon"
+                        android:layout_centerVertical="true">
+
+                    </View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@string/categ"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/categ_part">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cities_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/categories_card">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/city_icon"
+                        android:id="@+id/city_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/city_part"
+                        android:background="@color/silver"
+                        android:layout_toEndOf="@id/city_icon"
+                        android:layout_centerVertical="true">
+
+                    </View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@string/cities"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/city_part">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

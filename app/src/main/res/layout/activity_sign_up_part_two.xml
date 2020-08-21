@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivityPartTwo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/more"
+            android:fontFamily="@font/ambit_bold"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/signup_v_btn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/category_card"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_category"
+                        android:fontFamily="@font/ambit_bold"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/cate_text">
+
+                    </TextView>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/cate_spinner"
+                        android:layout_below="@id/cate_text"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp">
+
+                    </Spinner>
+
+                    <Button
+                        android:id="@+id/add_cate_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ambit_regular"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:background="@drawable/card_btn"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/add_cate"
+                        android:textAllCaps="false"
+                        android:layout_below="@id/cate_spinner">
+
+                    </Button>
+
+                    <TextView
+                        android:id="@+id/categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/add_cate_btn"
+                        android:textSize="17sp"
+                        android:gravity="start"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ambit_regular"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:maxLines="20"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
+
+                    </TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/category_recyclerview"
+                        android:layout_below="@id/categories"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/city_card"
+                android:layout_margin="10dp"
+                android:layout_below="@id/category_card">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_city"
+                        android:fontFamily="@font/ambit_bold"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/city_text">
+
+                    </TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/city_et"
+                        android:hint="@string/enter_city"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_below="@id/city_text"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp">
+
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/add_city_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ambit_regular"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:background="@drawable/card_btn"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/add_city"
+                        android:textAllCaps="false"
+                        android:layout_below="@id/city_et">
+
+                    </Button>
+
+                    <TextView
+                        android:id="@+id/cities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/add_city_btn"
+                        android:textSize="17sp"
+                        android:gravity="start"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ambit_regular"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:maxLines="20"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_card"
+                android:layout_margin="10dp"
+                android:layout_below="@id/city_card">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/id"
+                        android:fontFamily="@font/ambit_bold"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/id_text">
+
+                    </TextView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/upload_id_layout"
+                        android:layout_below="@id/id_text">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/upload_id_text"
+                            android:text="@string/id_proof"
+                            android:fontFamily="@font/ambit_bold"
+                            android:textColor="@color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="30dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/silver">
+
+                        </ImageView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/upload_address_layout"
+                        android:layout_below="@id/upload_id_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/upload_address_text"
+                            android:text="@string/address_proof"
+                            android:fontFamily="@font/ambit_bold"
+                            android:textColor="@color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="30dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/silver"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp">
+
+                        </ImageView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/upload_passbook_layout"
+                        android:layout_below="@id/upload_address_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/upload_pb_text"
+                            android:text="@string/scanned_pb"
+                            android:fontFamily="@font/ambit_bold"
+                            android:textColor="@color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="30dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/silver"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp">
+
+                        </ImageView>
+
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/signup_v_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_rev"
+        android:text="@string/v_otp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ambit_bold"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true">
+
+    </Button>
+
+
+
+</RelativeLayout>

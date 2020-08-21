@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent"
+        android:background="@drawable/login_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/header"
+            android:background="@drawable/gradient">
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/phone_image"
+            android:layout_width="70dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/header"
+            android:src="@drawable/phone_image"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-60dp">
+
+        </ImageView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/phone_image">
+
+            <TextView
+                android:id="@+id/ins_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/otp"
+                android:fontFamily="@font/ambit_regular"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/ins_text"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+
+                <EditText
+                    android:id="@+id/phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/regular"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/phone_layout"
+                android:background="@drawable/gradient"
+                android:text="@string/sendotp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:fontFamily="@font/ambit_bold"
+                android:textColor="@color/white"
+                android:textAllCaps="false">
+
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

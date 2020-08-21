@@ -1,0 +1,107 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Photographer App</string>
+    <string name="login_with_phone">Login with phone number</string>
+    <string name="create">Create an account</string>
+    <string name="capture">Capture Happiness</string>
+    <string name="otp">A verification code will be sent to the given number ( Don\'t include +91 )</string>
+    <string name="sendotp">Get OTP</string>
+    <string name="phone">Phone number</string>
+
+    <string name="rec_otp" tools:ignore="TypographyDashes">Please enter the verification code that is sent to +91-
+    </string>
+
+    <string name="verify">Verify</string>
+    <string name="v_code">Enter verification code</string>
+
+    <string name="cr">Create</string>
+    <string name="acc">Account</string>
+
+    <string name="firstName">First name*</string>
+    <string name="lastName">Last name</string>
+    <string name="email">Email address*</string>
+    <string name="ph">Phone*</string>
+    <string name="fullAddress">Full address*</string>
+    <string name="city">City*</string>
+    <string name="pinCode">Pin code*</string>
+    <string name="next">Next</string>
+
+    <string name="select_category">Select category of photography</string>
+    <string name="select_city">Enter city for service</string>
+
+    <string name="more">More details</string>
+    <string name="v_otp">Verify account with OTP</string>
+    <string name="add_cate">Add category</string>
+    <string name="add_city">Add city</string>
+    <string name="enter_city">City name</string>
+
+    <string name="id">Identities</string>
+
+    <string name="id_proof">Upload ID proof</string>
+    <string name="address_proof">Upload address proof</string>
+    <string name="scanned_pb">Upload scanned passbook</string>
+
+    <string name="settings">Settings</string>
+
+    <string-array name="settings_options">
+
+        <item>Category Management</item>
+        <item>City Management</item>
+        <item>Notifications</item>
+        <item>Rate us</item>
+        <item>Share vendor/partner</item>
+        <item>Share app</item>
+        <item>Unavailability</item>
+        <item>Profile Manage</item>
+        <item>Price Management</item>
+
+    </string-array>
+
+    <string-array name="gender">
+
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="category">
+
+        <item>Categories</item>
+        <item>Landscape Photography</item>
+        <item>Wildlife Photography</item>
+        <item>Aerial Photography</item>
+        <item>Sports / Action Photography</item>
+        <item>Portrait Photography</item>
+        <item>Architectural Photography</item>
+        <item>Wedding Photography</item>
+        <item>Fashion Photography</item>
+        <item>Macro Photography</item>
+        <item>Family Photography</item>
+        <item>Abstract Photography</item>
+        <item>Beauty Photography</item>
+        <item>Bird Photography</item>
+        <item>Black and White Photography</item>
+        <item>Candid Photography</item>
+        <item>Conceptual Photography</item>
+        <item>Firework Photography</item>
+        <item>Food Photography</item>
+        <item>Hi speed Photography</item>
+        <item>Infrared Photography</item>
+        <item>Modeling Photography</item>
+        <item>Night Photography</item>
+        <item>Rain Photography</item>
+        <item>Reflection Photography</item>
+        <item>Satellite Photography</item>
+
+
+    </string-array>
+
+    <string name="full_name">Full name</string>
+    <string name="em">Email address</string>
+    <string name="add">Full residential address</string>
+    <string name="categ">Categories</string>
+    <string name="cities">Cities</string>
+    <string name="gender">Gender</string>
+
+</resources>
