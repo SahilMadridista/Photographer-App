@@ -5,58 +5,54 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
+public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder> {
 
-   private ArrayList<String> Categories;
+   private ArrayList<String> Cities;
 
-   public CategoryAdapter(ArrayList<String> Categories){
-      this.Categories = Categories;
+   public CityAdapter(ArrayList<String> Categories){
+      this.Cities = Categories;
    }
 
    @NonNull
    @Override
-   public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+   public CityViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
       LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
       View view = layoutInflater.inflate(R.layout.recyclerview_single_item,parent,false);
-      return new CategoryViewHolder(view);
+      return new CityViewHolder(view);
    }
 
    @Override
-   public void onBindViewHolder(@NonNull CategoryViewHolder holder, final int position) {
+   public void onBindViewHolder(@NonNull CityViewHolder holder, int position) {
 
-      String data = Categories.get(position);
+      String data = Cities.get(position);
       holder.CategoryName.setText(data);
-
-      /*holder.DeleteImage.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View view) {
-            Categories.remove(position);
-         }
-      });*/
 
    }
 
    @Override
    public int getItemCount() {
-      return Categories.size();
+      return Cities.size();
    }
 
-   public static class CategoryViewHolder extends RecyclerView.ViewHolder{
+   public static class CityViewHolder extends RecyclerView.ViewHolder{
 
       TextView CategoryName;
       ImageView DeleteImage;
 
-      public CategoryViewHolder(@NonNull View itemView) {
+      public CityViewHolder(@NonNull View itemView) {
          super(itemView);
 
          CategoryName = itemView.findViewById(R.id.category_card_text);
          DeleteImage = itemView.findViewById(R.id.delete_icon);
 
       }
+
 
    }
 

@@ -8,34 +8,28 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivityPartTwo">
 
-    <RelativeLayout
+
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimaryDark"
+        app:title="More details"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/more"
-            android:fontFamily="@font/ambit_bold"
-            android:textColor="@color/white"
-            android:textSize="20sp">
-
-        </TextView>
-
-    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:layout_above="@id/signup_v_btn">
+        android:layout_alignParentBottom="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/a_layout">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -87,32 +81,15 @@
 
                     </Button>
 
-                    <TextView
-                        android:id="@+id/categories"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/add_cate_btn"
-                        android:textSize="17sp"
-                        android:gravity="start"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/ambit_regular"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:maxLines="20"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
-
-                    </TextView>
-
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/category_recyclerview"
-                        android:layout_below="@id/categories"
+                        android:layout_below="@id/add_cate_btn"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
 
                     </androidx.recyclerview.widget.RecyclerView>
 
@@ -148,6 +125,7 @@
                         android:layout_height="50dp"
                         android:id="@+id/city_et"
                         android:hint="@string/enter_city"
+                        android:inputType="textCapWords"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:layout_below="@id/city_text"
@@ -174,24 +152,17 @@
 
                     </Button>
 
-                    <TextView
-                        android:id="@+id/cities"
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:id="@+id/city_recyclerview"
                         android:layout_below="@id/add_city_btn"
-                        android:textSize="17sp"
-                        android:gravity="start"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/ambit_regular"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:maxLines="20"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="20dp"
                         android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
 
-                    </TextView>
+                    </androidx.recyclerview.widget.RecyclerView>
 
                 </RelativeLayout>
 
@@ -316,30 +287,29 @@
 
                     </RelativeLayout>
 
-
-
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
+            <Button
+                android:id="@+id/signup_v_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_rev"
+                android:text="@string/v_otp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/id_card"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ambit_bold"
+                android:textAllCaps="false">
+
+            </Button>
 
         </RelativeLayout>
 
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/signup_v_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/gradient_rev"
-        android:text="@string/v_otp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/ambit_bold"
-        android:textAllCaps="false"
-        android:layout_alignParentBottom="true">
-
-    </Button>
 
 
 
